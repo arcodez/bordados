@@ -1,3 +1,15 @@
+:root {
+  --blanco: #ffff;
+  --noche-clara: #15202b;
+  --noche-oscura: #000000;
+  --azul: #1da1f2;
+  --amarillo: #ffad1f;
+  --rosado: #e0245e;
+  --purpura: #794bc4;
+  --verde: #17bf63;
+  --naranja: #f45d22;
+}
+
 html,
 body {
   padding: 0;
