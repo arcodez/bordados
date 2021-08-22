@@ -2,10 +2,34 @@
   display: flex;
   justify-content: space-between;
   text-align: center;
-  background: red;
-  padding: 10px;
+  padding: 20px;
 }
+
 .header a {
   margin: 10px;
-  color: green;
+  color: white;
+}
+
+.header img {
+  width: 25px;
+  margin: 0 5px;
+}
+
+.button,
+.header a:hover {
+  background: var(--azul);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+nav i.fas.fa-tshirt {
+  font-size: 30px;
+}
+
+.social {
+  font-size: 25px;
+}
+
+.social i {
+  margin: 5px;
 }
