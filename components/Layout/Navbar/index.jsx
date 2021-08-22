@@ -3,15 +3,18 @@ import styles from "./Navbar.module.css";
 
 export const Navbar = () => (
   <header className={styles.header}>
-    <div>Swicth Mode</div>
+    <div className={styles.change}>
+      <i className={"fas fa-toggle-off " + styles.social}></i>
+      <img src="/sun.svg" alt="" />
+    </div>
 
     <nav>
-      <a href="#" className={styles.button}>
+      <a href="#" className={styles.activo}>
         Inicio
       </a>
       <a href="#">Bordados</a>
       <a href="#">Estampados</a>
-      <i className="fas fa-tshirt "></i>
+      <i className={`fas fa-tshirt ${styles.logo}`}></i>
       <a href="#">Nosotros</a>
       <a href="#">Preguntas Frecuentes</a>
       <a href="#">Contacto</a>

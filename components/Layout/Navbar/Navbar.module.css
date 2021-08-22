@@ -15,14 +15,19 @@
   margin: 0 5px;
 }
 
-.button,
+.change {
+  display: flex;
+  align-items: center;
+}
+
+.activo,
 .header a:hover {
   background: var(--azul);
   padding: 10px;
   border-radius: 20px;
 }
 
-nav i.fas.fa-tshirt {
+.logo {
   font-size: 30px;
 }
 
