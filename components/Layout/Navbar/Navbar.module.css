@@ -6,6 +6,7 @@
 }
 
 .header a {
+  transition: .5s ease all;
   margin: 10px;
   color: white;
 }
@@ -29,6 +30,8 @@
 
 .logo {
   font-size: 30px;
+  margin: 0 20px;
+
 }
 
 .social {

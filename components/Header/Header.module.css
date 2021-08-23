@@ -1,0 +1,44 @@
+.header {
+  width: 90%;
+  margin: auto;
+}
+
+.text {
+    text-align: center;
+    width: 30%;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.box {
+  height: 400px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #2193b0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #6dd5ed,
+    #2193b0
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #6dd5ed,
+    #2193b0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.card_container {
+  display: flex;
+}
+
+.card_container div {
+  margin: auto;
+  text-align: center;
+}
+
+.card {
+  height: 300px;
+  width: 500px;
+  border-radius: 20px;
+  background-color: var(--noche-clara);
+}
