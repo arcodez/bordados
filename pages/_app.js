@@ -6,6 +6,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <Fragment>
       <Head>
+      <link rel="shortcut icon" href="/shirt.png" type="image/x-icon" />
         <link
           rel="stylesheet"
           href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"

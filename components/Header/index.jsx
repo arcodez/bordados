@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <div className={styles.header}><div className={styles.text}>
         
-          <h1>Bordados Arcodez</h1>
+          <h1>Bordados <span>Arcodez</span></h1>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt,
             iure. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores et culpa possimus unde dicta vel perferendis quasi architecto .
