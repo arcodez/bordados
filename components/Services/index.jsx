@@ -1,36 +1,81 @@
 import styles from "./Services.module.css";
 
+const ServiceCard = ({ desc = "", icono = "" }) => (
+  <div className="services_card">
+    <i className={icono || "fas fa-fill-drip"}></i>
+    <p>{desc || "Lorem ipsum dolor sit."}</p>
+    <div className="card_button">
+      <button className="button">Ver ejemplos</button>
+    </div>
+
+    <style jsx>{`
+      i {
+        font-size: 40px;
+      }
+      
+      .button {
+          border: none;
+          border-radius: 20px;
+          padding: 10px 20px;
+          background: var(--azul);
+          color: var(--blanco);
+          /* font-size: 18px; */
+        }
+      .services_card {
+        width: 20%;
+        margin 20px;
+        padding: 10px 0;
+        border-radius: 20px;
+        background: #47535e;
+      }
+      .services_card p {
+        font-size: 20px;
+      }
+    `}</style>
+  </div>
+);
+
 export const Services = () => {
   return (
-    <div className={styles.services}>
-      <p className={styles.sub_title_services}>Sencillo y Rapido</p>
-      <h2>Empieza en 2 simples pasos</h2>
-
-      <div className={styles.services_cards}>
-        <div className={styles.services_card}>
-          <div className={styles.card_icon}></div>
-          <div className={styles.card_button}></div>
-          <p>Lorem ipsum dolor sit.</p>
-        </div>
-
-        <div className={styles.services_card}>
-          <div className={styles.card_icon}></div>
-          <div className={styles.card_button}></div>
-          <p>Lorem ipsum dolor sit.</p>
-        </div>
-
-        <div className={styles.services_card}>
-          <div className={styles.card_icon}></div>
-          <div className={styles.card_button}></div>
-          <p>Lorem ipsum dolor sit.</p>
-        </div>
-
-        <div className={styles.services_card}>
-          <div className={styles.card_icon}></div>
-          <div className={styles.card_button}></div>
-          <p>Lorem ipsum dolor sit.</p>
-        </div>
+    <div className="services">
+      <div className="titles">
+        <h3 className="sub_title_services">Sencillo y Rapido</h3>
+        <h2>Deja las complicaciones de Lado</h2>
       </div>
+
+      <div className="services_cards">
+        <ServiceCard desc="Estampados" />
+        <ServiceCard desc="Bordados" icono={"fas fa-graduation-cap"} />
+        <ServiceCard desc="Sublimacion" icono={"far fa-images"} />
+        <ServiceCard
+          desc="Rapido y Mantenible"
+          icono={"fas fa-tachometer-alt"}
+        />
+      </div>
+
+      <style jsx global>{`
+        .services {
+          width: 90%;
+          margin: auto;
+        }
+        .services .titles {
+          text-align: center;
+        }
+        .services h2 {
+          text-transform: capitalize;
+        }
+        .sub_title_services {
+          color: var(--azul);
+          text-transform: uppercase;
+        }
+        .services_cards {
+          display: flex;
+          flex-wrap: wrap;
+          margin: auto;
+          justify-content: center;
+          text-align: center;
+        }
+      `}</style>
     </div>
   );
 };
