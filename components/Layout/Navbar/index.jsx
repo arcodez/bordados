@@ -3,31 +3,32 @@ import { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 
 export const Navbar = () => {
-
   const [theme, setTheme] = useState({
     active: "off",
-    icon: "sun.svg"
-  })
+    icon: "sun.svg",
+  });
 
   function handleActivo() {
     if (theme.active === "off") {
       setTheme({
         active: "on",
-        icon: "moon.svg"
-      })
+        icon: "moon.svg",
+      });
     } else {
       setTheme({
         active: "off",
-        icon: "sun.svg"
-      })
+        icon: "sun.svg",
+      });
     }
   }
 
   return (
     <header className={styles.header}>
       <div className={styles.change}>
-
-        <i className={`fas fa-toggle-${theme.active} ${styles.social}`} onClick={() => handleActivo()}></i>
+        <i
+          className={`fas fa-toggle-${theme.active} ${styles.social}`}
+          onClick={() => handleActivo()}
+        ></i>
         <img src={theme.icon} alt="" />
       </div>
 
@@ -44,9 +45,9 @@ export const Navbar = () => {
       </nav>
 
       <div className={styles.social}>
+        <i className="fas fa-shopping-cart"></i>
         <i className="fab fa-instagram"></i>
-        <i className="fab fa-github"></i>
       </div>
     </header>
-  )
+  );
 };

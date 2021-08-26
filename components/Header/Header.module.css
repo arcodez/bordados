@@ -7,10 +7,10 @@
   color: var(--azul);
 }
 .text {
-    text-align: center;
-    width: 30%;
-    margin: auto;
-    padding-bottom: 10px;
+  text-align: center;
+  width: 30%;
+  margin: auto;
+  padding-bottom: 10px;
 }
 
 .box {
@@ -28,7 +28,7 @@
     #6dd5ed,
     #2193b0
   ); /* W3C, IE 10+/Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  box-shadow: 0 0 15px #ffff;
+  box-shadow: var(--shadow);
 }
 
 .card_container {

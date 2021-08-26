@@ -1,6 +1,7 @@
 :root {
   --blanco: #ffff;
   --noche-clara: #15202b;
+  --noche-clarac: #28323bcf;
   --noche-oscura: #000000;
   --azul: #1da1f2;
   --amarillo: #ffad1f;
@@ -8,6 +9,7 @@
   --purpura: #794bc4;
   --verde: #17bf63;
   --naranja: #f45d22;
+  --shadow: 0 0 15px #ffff;
 }
 
 html,

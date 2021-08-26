@@ -26,7 +26,8 @@ const ServiceCard = ({ desc = "", icono = "" }) => (
         margin 20px;
         padding: 10px 0;
         border-radius: 20px;
-        background: #47535e;
+        background: var(--noche-clarac);
+        box-shadow: var(--shadow);
       }
       .services_card p {
         font-size: 20px;
@@ -40,7 +41,7 @@ export const Services = () => {
     <div className="services">
       <div className="titles">
         <h3 className="sub_title_services">Sencillo y Rapido</h3>
-        <h2>Deja las complicaciones de Lado</h2>
+        <h2>Deja las complicaciones de lado</h2>
       </div>
 
       <div className="services_cards">
@@ -61,9 +62,7 @@ export const Services = () => {
         .services .titles {
           text-align: center;
         }
-        .services h2 {
-          text-transform: capitalize;
-        }
+
         .sub_title_services {
           color: var(--azul);
           text-transform: uppercase;

@@ -6,7 +6,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <Fragment>
       <Head>
-      <link rel="shortcut icon" href="/shirt.png" type="image/x-icon" />
+        <link rel="shortcut icon" href="/shirt.png" type="image/x-icon" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css"
+        ></link>
         <link
           rel="stylesheet"
           href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
