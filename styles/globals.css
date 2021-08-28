@@ -30,3 +30,20 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.carousel__indicadores .glider-dot {
+  display: block;
+  /* width: 30px;
+  height: 4px; */
+  background: #fff;
+  opacity: 0.2;
+  margin: 10px;
+}
+
+.carousel__indicadores .glider-dot:hover {
+  opacity: 0.5;
+}
+
+.carousel__indicadores .glider-dot.active {
+  opacity: 1;
+}
