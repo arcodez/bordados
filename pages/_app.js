@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import "../styles/globals.css";
 import Head from "next/head";
+import Script from "next/script";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -18,7 +19,9 @@ function MyApp({ Component, pageProps }) {
           crossOrigin="anonymous"
         />
       </Head>
+
       <Component {...pageProps} />
+      <Script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></Script>
     </Fragment>
   );
 }

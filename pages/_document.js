@@ -13,7 +13,6 @@ class MyDocument extends Document {
         <Head />
         <body>
           <Main />
-          <Script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></Script>
           <NextScript />
         </body>
       </Html>
