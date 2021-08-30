@@ -72,7 +72,11 @@ export const Navbar = () => {
 
       {/* Pushbar Menu  */}
 
-      <div data-pushbar-id="pushbar-menu" data-pushbar-direction="right">
+      <div
+        data-pushbar-id="pushbar-menu"
+        className="pushbar-menu"
+        data-pushbar-direction="right"
+      >
         <button data-pushbar-close>
           <i className="fas fa-times"></i>
         </button>
@@ -161,7 +165,7 @@ export const Navbar = () => {
           }
         }
 
-        #pushbar-menu {
+        .pushbar-menu {
           background: var(--noche-clara);
           display: flex;
           flex-direction: column;
