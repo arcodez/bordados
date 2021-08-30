@@ -12,18 +12,18 @@ const ServiceCard = ({ desc = "", icono = "" }) => (
       i {
         font-size: 40px;
       }
-      
+
       .button {
-          border: none;
-          border-radius: 20px;
-          padding: 10px 20px;
-          background: var(--azul);
-          color: var(--blanco);
-          /* font-size: 18px; */
-        }
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        background: var(--azul);
+        color: var(--blanco);
+        /* font-size: 18px; */
+      }
       .services_card {
         width: 20%;
-        margin 20px;
+        margin: 20px;
         padding: 10px 0;
         border-radius: 20px;
         background: var(--noche-clarac);
@@ -31,6 +31,12 @@ const ServiceCard = ({ desc = "", icono = "" }) => (
       }
       .services_card p {
         font-size: 20px;
+      }
+
+      @media screen and (max-width: 576px) {
+        .services_card {
+          width: 100%;
+        }
       }
     `}</style>
   </div>
