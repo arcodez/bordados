@@ -27,6 +27,8 @@ export const Header = () => {
         .header {
           width: 90%;
           margin: auto;
+          left: 0;
+          right: 0;
         }
 
         .header span {

@@ -63,7 +63,7 @@ export const Services = () => {
       <style jsx global>{`
         .services {
           width: 90%;
-          margin: auto;
+          justify-content: center;
         }
         .services .titles {
           text-align: center;

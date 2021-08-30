@@ -10,9 +10,22 @@ export default function Home() {
       <Head>
         <title>Bordados || Margarita</title>
       </Head>
-      <Header />
-      <Services />
-      <Carousel />
+      {/* <div className="container"> */}
+      <center>
+        <Header />
+        <Services />
+        <Carousel />
+      </center>
+      {/* </div> */}
+
+      <style jsx>{`
+        .container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      `}</style>
     </Layout>
   );
 }
