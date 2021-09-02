@@ -85,7 +85,7 @@ export const Navbar = () => {
         </a>
         <a href="#">Bordados</a>
         <a href="#">Estampados</a>
-        <i className="fas fa-tshirt logo"></i>
+        <i className="fas fa-tshirt logo ml"></i>
         <a href="#">Nosotros</a>
         <a href="#">F. A. Q</a>
         <a href="#">Contacto</a>
@@ -145,6 +145,10 @@ export const Navbar = () => {
           margin: 5px;
         }
 
+        .ml {
+          display: none;
+        }
+
         .ml-icon {
           display: none;
           padding: 5px;
@@ -169,6 +173,7 @@ export const Navbar = () => {
           background: var(--noche-clara);
           display: flex;
           flex-direction: column;
+          align-items: center;
         }
 
         @-webkit-keyframes rotate {
