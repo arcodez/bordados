@@ -64,6 +64,7 @@ export const Services = () => {
         .services {
           width: 90%;
           justify-content: center;
+          margin: auto;
         }
         .services .titles {
           text-align: center;
