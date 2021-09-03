@@ -2,10 +2,10 @@ export function Cards() {
   return (
     <section className="card">
       <div className="container">
-        <h2 className="title">Aprende los temas importantes</h2>
-        <p className="card__copy">
-          Estos son los temas importantes que debes aprender
-        </p>
+        <div className="titles">
+          <h3 className="sub_title">Lorem, ipsum.</h3>
+          <h2>Lorem ipsum dolor sit.</h2>
+        </div>
         <div className="card__container">
           <div className="card__item">
             <figure>
@@ -62,19 +62,19 @@ export function Cards() {
       </div>
 
       <style jsx>{`
-        .container {
-          width: 90%;
-          margin: auto;
-        }
         .card {
-           {
-            /* background: #f2f2f2; */
-          }
+          /* background: #f2f2f2; */
         }
 
-        .card__copy {
-          margin-top: 20px;
+        .titles {
+          text-align: center;
         }
+
+        .sub_title {
+          color: var(--azul);
+          text-transform: uppercase;
+        }
+
         .card__container {
           width: 99%;
           margin: 0 auto;
