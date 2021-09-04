@@ -18,8 +18,22 @@ export const Header = () => {
 
       <div className="box">
         <div className="card_container">
-          <div className="card">Primera parte</div>
-          <div className="card"> Segunda Parte</div>
+          <div className="card">
+            <div className="sub_card">
+              <i className="fas fa-check-circle"></i>
+              <h3>Tu producto Asegurado</h3>
+              <p>Entregas Directas</p>
+            </div>
+            <div className="sub_card">
+              <h3>Los mejores precios de todos</h3>
+              <div className="precios">
+                <div className="precio">5 $</div>
+                <div className="precio">10 $</div>
+                <div className="precio">15 $</div>
+              </div>
+            </div>
+          </div>
+          <div className="card"></div>
         </div>
       </div>
 
@@ -67,13 +81,35 @@ export const Header = () => {
         }
 
         .card {
-          height: 300px;
-          width: 45%;
+          min-height: 300px;
+          min-width: 45%;
           margin: 20px;
           border-radius: 20px;
-          background-color: var(--noche-clara);
+          background-color: var(--noche-clara); 
+        }
+        .sub_card {
+          background: var(--noche-clarac);
+          border-radius: 20px;
+          width: 100%;
+          margin: 10px auto;.
+          padding: 20px 0;
         }
 
+        .precios {
+          display: flex;
+          padding: 10px;
+        }
+
+        .precio {
+          width: 33.33%;
+          font-weight: bold;
+          font-size: 18px;
+        }
+
+        .sub_card i {
+          color: #22f322;
+          font-size: 40px;
+        }
         @media screen and (max-width: 780px) {
           .text {
             width: 90%;
