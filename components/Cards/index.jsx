@@ -1,16 +1,25 @@
-function CardItem() {
+function CardItem({ img = "", title = "" }) {
   return (
     <div className="card__item">
       <figure>
-        <div className="card__img">
+        <img
+          src={
+            img || "https://colormake.com/wp-content/uploads/2014/08/gorras.png"
+          }
+          alt=""
+        />
+        {/* <div className="card__img">
           <img src="" alt="" />
-        </div>
+        </div> */}
       </figure>
-      <h3 className="card__title">Css Grid</h3>
+      <h3 className="card__title">{title || "Gorras"}</h3>
       <p className="card__paragraph">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, ab!
       </p>
       <style jsx>{`
+        figure img {
+          width: 100%;
+        }
         .card__item {
           padding: 20px;
           background: var(--noche-clarac);
@@ -35,7 +44,7 @@ function CardItem() {
         .card__title {
           margin: 20px 0;
           font-size: 1.5rem;
-        } 
+        }
 
         .card__paragraph {
           font-weight: 300;
@@ -52,7 +61,8 @@ function CardItem() {
         }
         .card__item:nth-last-of-type(4) {
           grid-area: card4;
-        }      `}</style>
+        }
+      `}</style>
     </div>
   );
 }
@@ -67,9 +77,18 @@ export function Cards() {
         </div>
         <div className="card__container">
           <CardItem />
-          <CardItem />
-          <CardItem />
-          <CardItem />
+          <CardItem
+            img="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/c0b38a3a-ac58-42a6-95c9-9ebc7541a4fc/dcnuqbw-7222ee63-2654-4cdc-9460-84ddbcd869dc.png"
+            title="Franelas"
+          />
+          <CardItem
+            img="https://suministrales.com/wp-content/uploads/2019/11/Camisas-en-Oxford-Hombre-y-Mujer-copia.png"
+            title="Camisas"
+          />
+          <CardItem
+            img="https://colormake.com/wp-content/uploads/2020/02/taza-de-ceramica-tipo-peltre.png"
+            title="Tazas"
+          />
         </div>
       </div>
 

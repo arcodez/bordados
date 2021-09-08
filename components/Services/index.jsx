@@ -54,10 +54,7 @@ export const Services = () => {
         <ServiceCard desc="Estampados" />
         <ServiceCard desc="Bordados" icono={"fas fa-graduation-cap"} />
         <ServiceCard desc="Sublimacion" icono={"far fa-images"} />
-        <ServiceCard
-          desc="Rapido y Mantenible"
-          icono={"fas fa-tachometer-alt"}
-        />
+        <ServiceCard desc="Serigrafia" icono={"fas fa-brush"} />
       </div>
 
       <style jsx global>{`

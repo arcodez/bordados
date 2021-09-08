@@ -19,6 +19,13 @@ export const Header = () => {
       <div className="box">
         <div className="card_container">
           <div className="card">
+            <img
+              src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_180094648_118134.jpg"
+              alt=""
+            />
+            <p>Vuelve realidad todas tus ideas </p>
+          </div>
+          <div className="card">
             <div className="sub_card">
               <i className="fas fa-check-circle"></i>
               <h3>Tu producto Asegurado</h3>
@@ -32,8 +39,11 @@ export const Header = () => {
                 <div className="precio">15 $</div>
               </div>
             </div>
+            <div className="sub_card">
+              <i className="far fa-thumbs-up"></i>
+              <h3>El mejor servicio Garantizado</h3>
+            </div>
           </div>
-          <div className="card"></div>
         </div>
       </div>
 
@@ -85,13 +95,20 @@ export const Header = () => {
           min-width: 45%;
           margin: 20px;
           border-radius: 20px;
-          background-color: var(--noche-clara); 
+          /* background-color: var(--noche-clara); */
+          background-color: var(--noche-clara);
         }
+
+        .card img {
+          width: 100%;
+          border-radius: 20px;
+        }
+
         .sub_card {
           background: var(--noche-clarac);
           border-radius: 20px;
           width: 100%;
-          margin: 10px auto;.
+          margin: 30px auto;.
           padding: 20px 0;
         }
 
