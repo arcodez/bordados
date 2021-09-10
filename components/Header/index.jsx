@@ -19,11 +19,13 @@ export const Header = () => {
       <div className="box">
         <div className="card_container">
           <div className="card">
-            <img
+          <div className="sub_card">
+          <img
               src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_180094648_118134.jpg"
               alt=""
             />
             <p>Vuelve realidad todas tus ideas </p>
+          </div>
           </div>
           <div className="card">
             <div className="sub_card">
@@ -53,7 +55,7 @@ export const Header = () => {
           margin: auto;
           left: 0;
           right: 0;
-        }
+        } 
 
         .header span {
           color: var(--azul);
@@ -91,12 +93,16 @@ export const Header = () => {
         }
 
         .card {
-          min-height: 300px;
+          min-height: 200px;
           min-width: 45%;
-          margin: 20px;
+          width: 90%;
+          margin: 20px; 
           border-radius: 20px;
           /* background-color: var(--noche-clara); */
-          background-color: var(--noche-clara);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
         }
 
         .card img {
@@ -105,11 +111,11 @@ export const Header = () => {
         }
 
         .sub_card {
-          background: var(--noche-clarac);
+          background: var(--noche-clara);
           border-radius: 20px;
           width: 100%;
-          margin: 30px auto;.
-          padding: 20px 0;
+          margin: 10px auto;
+          padding: 10px;
         }
 
         .precios {
@@ -131,13 +137,13 @@ export const Header = () => {
           .text {
             width: 90%;
           }
-        }
-
-        @media screen and (max-width: 580px) {
           .card_container {
             flex-wrap: wrap;
           }
 
+        }
+
+        @media screen and (max-width: 580px) {
           .card {
             width: 90%;
             margin: 10px 0;
