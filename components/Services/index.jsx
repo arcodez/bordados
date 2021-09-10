@@ -33,6 +33,12 @@ const ServiceCard = ({ desc = "", icono = "" }) => (
         font-size: 20px;
       }
 
+      @media screen and (max-width: 780px) { 
+        .services_card {
+          width: 40%;
+        }
+      }
+
       @media screen and (max-width: 576px) {
         .services_card {
           width: 100%;
