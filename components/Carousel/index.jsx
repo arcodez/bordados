@@ -164,7 +164,8 @@ export function Carousel() {
         .contenedor {
           max-width: 1200px;
           width: 90%;
-          margin: auto;
+          margin: 10px auto;
+          padding: 10px;
         }
 
         /* --- --- CAROUSEL --- --- */

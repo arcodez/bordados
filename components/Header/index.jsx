@@ -55,6 +55,7 @@ export const Header = () => {
           margin: auto;
           left: 0;
           right: 0;
+          padding: 10px;
         } 
 
         .header span {

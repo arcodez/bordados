@@ -1,7 +1,7 @@
 //import * as styles from "./style.js";
 import { useEffect, useState } from "react";
-import styles from "./Navbar.module.css";
 import Image from "next/image";
+import Link from "next/link"
 
 export const Navbar = () => {
   const [theme, setTheme] = useState({
@@ -45,15 +45,27 @@ export const Navbar = () => {
       </div>
 
       <nav className="nav">
-        <a href="#" className="activo">
-          Inicio
-        </a>
-        <a href="#">Bordados</a>
-        <a href="#">Estampados</a>
+        <Link href="/">
+          <a className="activo">
+            Inicio
+          </a>
+        </Link>
+        <Link href="#">
+          <a>Bordados</a>
+        </Link>
+        <Link href="#">
+          <a>Estampados</a>
+        </Link>
         <i className="fas fa-tshirt logo"></i>
-        <a href="#">Nosotros</a>
-        <a href="#">F. A. Q</a>
-        <a href="#">Contacto</a>
+        <Link href="#">
+          <a>Nosotros</a>
+        </Link>
+        <Link href="#">
+          <a>F. A. Q</a>
+        </Link>
+        <Link href="#">
+          <a>Contacto</a>
+        </Link>
       </nav>
 
       <div className="social icons">
@@ -80,15 +92,15 @@ export const Navbar = () => {
         <button data-pushbar-close>
           <i className="fas fa-times"></i>
         </button>
-        <a href="#" className="activo">
+        <a className="activo">
           Inicio
         </a>
-        <a href="#">Bordados</a>
-        <a href="#">Estampados</a>
+        <a>Bordados</a>
+        <a>Estampados</a>
         <i className="fas fa-tshirt logo ml"></i>
-        <a href="#">Nosotros</a>
-        <a href="#">F. A. Q</a>
-        <a href="#">Contacto</a>
+        <a>Nosotros</a>
+        <a>F. A. Q</a>
+        <a>Contacto</a>
 
         <div className="icons">
           <i className="fas fa-shopping-cart"></i>

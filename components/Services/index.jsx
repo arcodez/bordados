@@ -1,11 +1,14 @@
 import styles from "./Services.module.css";
+import Link from "next/link";
 
-const ServiceCard = ({ desc = "", icono = "" }) => (
+const ServiceCard = ({ desc = "", icono = "", url = "" }) => (
   <div className="services_card">
     <i className={icono || "fas fa-fill-drip"}></i>
     <p>{desc || "Lorem ipsum dolor sit."}</p>
     <div className="card_button">
-      <button className="button">Ver ejemplos</button>
+      <Link href={`/examples${url}` || "/examples#estampados"}>
+        <a className="button">Ver ejemplos</a>
+      </Link>
     </div>
 
     <style jsx>{`
@@ -58,16 +61,17 @@ export const Services = () => {
 
       <div className="services_cards">
         <ServiceCard desc="Estampados" />
-        <ServiceCard desc="Bordados" icono={"fas fa-graduation-cap"} />
-        <ServiceCard desc="Sublimacion" icono={"far fa-images"} />
-        <ServiceCard desc="Serigrafia" icono={"fas fa-brush"} />
+        <ServiceCard desc="Bordados" icono={"fas fa-graduation-cap"} url="#bordados" />
+        <ServiceCard desc="Sublimacion" icono={"far fa-images"} url="#sublimacion" />
+        <ServiceCard desc="Serigrafia" icono={"fas fa-brush"} url="#serigrafia" />
       </div>
 
-      <style jsx global>{`
+      <style jsx>{`
         .services {
           width: 90%;
           justify-content: center;
           margin: auto;
+          padding: 10px;
         }
         .services .titles {
           text-align: center;
