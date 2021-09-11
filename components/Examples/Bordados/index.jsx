@@ -15,7 +15,7 @@ export function Bordados() {
 
       <div className="cards_list">
         {[1, 2, 3, 4, 5, 6].map((card) => (
-          <ExampleCard />
+          <ExampleCard key={card} />
         ))}
       </div>
 
