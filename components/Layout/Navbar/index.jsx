@@ -1,7 +1,7 @@
 //import * as styles from "./style.js";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link"
+import Link from "next/link";
 
 export const Navbar = () => {
   const [theme, setTheme] = useState({
@@ -46,9 +46,7 @@ export const Navbar = () => {
 
       <nav className="nav">
         <Link href="/">
-          <a className="activo">
-            Inicio
-          </a>
+          <a className="activo">Inicio</a>
         </Link>
         <Link href="#">
           <a>Bordados</a>
@@ -69,14 +67,18 @@ export const Navbar = () => {
       </nav>
 
       <div className="social icons">
-        <i className="fas fa-shopping-cart"></i>
+        <Link href="/cart">
+          <a>
+            <i className="fas fa-shopping-cart"></i>
+          </a>
+        </Link>
         <i className="fab fa-instagram"></i>
       </div>
 
       <i className="fas fa-tshirt logo ml"></i>
 
       <i
-        className="fas fa-bars icons ml-icon ml"
+        cl="fas fa-bars icons ml-icon ml"
         onClick={() => {
           pushbar.open("pushbar-menu");
         }}
@@ -92,9 +94,7 @@ export const Navbar = () => {
         <button data-pushbar-close>
           <i className="fas fa-times"></i>
         </button>
-        <a className="activo">
-          Inicio
-        </a>
+        <a className="activo">Inicio</a>
         <a>Bordados</a>
         <a>Estampados</a>
         <i className="fas fa-tshirt logo ml"></i>
