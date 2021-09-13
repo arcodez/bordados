@@ -54,7 +54,13 @@ export const Navbar = () => {
         <Link href="#">
           <a>Estampados</a>
         </Link>
-        <i className="fas fa-tshirt logo"></i>
+
+        <Link href="/">
+          <a>
+            <i className="fas fa-tshirt logo"></i>
+          </a>
+        </Link>
+
         <Link href="#">
           <a>Nosotros</a>
         </Link>
