@@ -9,6 +9,8 @@ export default function card() {
       </Head>
       <div className="carito">
         <div className="products">
+          <h2>Lista de Productos</h2>
+          <hr />
           <div className="product"></div>
         </div>
         <h2>El carrito esta vacio</h2>
