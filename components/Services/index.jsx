@@ -12,6 +12,9 @@ const ServiceCard = ({ desc = "", icono = "", url = "" }) => (
     </div>
 
     <style jsx>{`
+      a {
+        display: inline-block;
+      }
       i {
         font-size: 40px;
       }
@@ -27,7 +30,7 @@ const ServiceCard = ({ desc = "", icono = "", url = "" }) => (
       .services_card {
         width: 20%;
         margin: 20px;
-        padding: 10px 0;
+        padding: 20px 0;
         border-radius: 20px;
         background: var(--noche-clarac);
         box-shadow: var(--shadow);
@@ -36,7 +39,7 @@ const ServiceCard = ({ desc = "", icono = "", url = "" }) => (
         font-size: 20px;
       }
 
-      @media screen and (max-width: 780px) { 
+      @media screen and (max-width: 780px) {
         .services_card {
           width: 40%;
         }
@@ -61,9 +64,21 @@ export const Services = () => {
 
       <div className="services_cards">
         <ServiceCard desc="Estampados" />
-        <ServiceCard desc="Bordados" icono={"fas fa-graduation-cap"} url="#bordados" />
-        <ServiceCard desc="Sublimacion" icono={"far fa-images"} url="#sublimacion" />
-        <ServiceCard desc="Serigrafia" icono={"fas fa-brush"} url="#serigrafia" />
+        <ServiceCard
+          desc="Bordados"
+          icono={"fas fa-graduation-cap"}
+          url="#bordados"
+        />
+        <ServiceCard
+          desc="Sublimacion"
+          icono={"far fa-images"}
+          url="#sublimacion"
+        />
+        <ServiceCard
+          desc="Serigrafia"
+          icono={"fas fa-brush"}
+          url="#serigrafia"
+        />
       </div>
 
       <style jsx>{`
