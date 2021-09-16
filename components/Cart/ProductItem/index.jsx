@@ -9,7 +9,6 @@ export function ProductItem({ data, addToCart }) {
       <style jsx>{`
         div {
           margin: 10px auto;
-          background: red;
         }
       `}</style>
     </div>

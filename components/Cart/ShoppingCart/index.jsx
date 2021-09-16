@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useEffect, useReducer, useState } from "react";
 import { TYPES } from "../../../actions/shoppingAction";
 import {
   initialShoppingState,
@@ -9,7 +9,12 @@ import { ProductItem } from "../ProductItem";
 
 export function ShoppingCart() {
   const [state, dispatch] = useReducer(ShoppingReducer, initialShoppingState);
+  const [total, setTotal] = useState(0);
   const { products, cart } = state;
+
+  useEffect(() => {
+    setTotal(cart.reduce((acc, el) => acc + el.price * el.quantity, 0));
+  }, [cart]);
 
   const addToCart = (id) => {
     dispatch({ type: TYPES.ADD_TO_CART, payload: id });
@@ -45,12 +50,9 @@ export function ShoppingCart() {
           <CartItem key={index} data={item} delFromCart={delFromCart} />
         ))}
       </article>
+      <h4>Total ${total}</h4>
 
       <style jsx>{`
-        /* .products {
-          display: flex;
-          flex-direction: column;
-        } */
         .box {
           display: flex;
         }
