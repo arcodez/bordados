@@ -12,6 +12,9 @@ export function CartItem({ data, delFromCart }) {
       <button onClick={() => delFromCart(id, true)}>Eliminar Todos</button>
       <br />
       <br />
+      <style jsx>{`
+        margin: 10px;
+      `}</style>
     </div>
   );
 }

@@ -38,8 +38,9 @@ export function ShoppingCart() {
       </article>
 
       <h3>Carrito</h3>
+
+      <button onClick={clearCart}>Limpiar Carrito</button>
       <article className="box">
-        <button onClick={clearCart}>Limpiar Carrito</button>
         {cart.map((item, index) => (
           <CartItem key={index} data={item} delFromCart={delFromCart} />
         ))}
@@ -49,6 +50,9 @@ export function ShoppingCart() {
           display: flex;
           flex-direction: column;
         } */
+        .box {
+          display: flex;
+        }
       `}</style>
     </div>
   );

@@ -1,24 +1,13 @@
 //import * as styles from "./style.js";
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import { PushbarMenu } from "./PushbarMenu";
 
 export const Navbar = () => {
   const [theme, setTheme] = useState({
     active: "off",
     icon: "/sun.svg",
   });
-  const [pushbar, setPushbar] = useState({});
-  useEffect(() => {
-    window.addEventListener("load", () => {
-      setPushbar(
-        new Pushbar({
-          blur: true,
-          overlay: true,
-        })
-      );
-    });
-  }, []);
 
   function handleActivo() {
     if (theme.active === "off") {
@@ -81,38 +70,7 @@ export const Navbar = () => {
         <i className="fab fa-instagram"></i>
       </div>
 
-      <i className="fas fa-tshirt logo ml"></i>
-
-      <i
-        cl="fas fa-bars icons ml-icon ml"
-        onClick={() => {
-          pushbar.open("pushbar-menu");
-        }}
-      ></i>
-
-      {/* Pushbar Menu  */}
-
-      <div
-        data-pushbar-id="pushbar-menu"
-        className="pushbar-menu"
-        data-pushbar-direction="right"
-      >
-        <button data-pushbar-close>
-          <i className="fas fa-times"></i>
-        </button>
-        <a className="activo">Inicio</a>
-        <a>Bordados</a>
-        <a>Estampados</a>
-        <i className="fas fa-tshirt logo ml"></i>
-        <a>Nosotros</a>
-        <a>F. A. Q</a>
-        <a>Contacto</a>
-
-        <div className="icons">
-          <i className="fas fa-shopping-cart"></i>
-          <i className="fab fa-instagram"></i>
-        </div>
-      </div>
+      <PushbarMenu />
 
       <style jsx>{`
         .header {
@@ -161,46 +119,6 @@ export const Navbar = () => {
 
         .social i {
           margin: 5px;
-        }
-
-        .ml {
-          display: none;
-        }
-
-        .ml-icon {
-          display: none;
-          padding: 5px;
-          border-radius: 5px;
-        }
-
-        .ml-icon:hover {
-          background: var(--azul);
-          animation: 2s rotate;
-        }
-
-        @keyframes rotate {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(180deg);
-          }
-        }
-
-        .pushbar-menu {
-          background: var(--noche-clara);
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-
-        @-webkit-keyframes rotate {
-          from {
-            -webkit-transform: rotate(0deg);
-          }
-          to {
-            -webkit-transform: rotate(360deg);
-          }
         }
 
         @media screen and (max-width: 800px) {

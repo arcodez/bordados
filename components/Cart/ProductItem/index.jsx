@@ -5,6 +5,12 @@ export function ProductItem({ data, addToCart }) {
       <h4>{name}</h4>
       <h5>$ {price}</h5>
       <button onClick={() => addToCart(id)}>Agregar</button>
+
+      <style jsx>{`
+        div {
+          margin: 10px;
+        }
+      `}</style>
     </div>
   );
 }
