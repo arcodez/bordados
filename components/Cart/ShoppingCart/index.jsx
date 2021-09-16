@@ -45,6 +45,7 @@ export function ShoppingCart() {
           <CartItem key={index} data={item} delFromCart={delFromCart} />
         ))}
       </article>
+
       <style jsx>{`
         /* .products {
           display: flex;
@@ -52,6 +53,13 @@ export function ShoppingCart() {
         } */
         .box {
           display: flex;
+        }
+
+        @media screen and (max-width: 800px) {
+          .box {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+          }
         }
       `}</style>
     </div>

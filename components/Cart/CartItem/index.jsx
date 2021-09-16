@@ -13,7 +13,10 @@ export function CartItem({ data, delFromCart }) {
       <br />
       <br />
       <style jsx>{`
-        margin: 10px;
+        div {
+          margin: 10px auto;
+          background: red;
+        }
       `}</style>
     </div>
   );
