@@ -25,7 +25,8 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <Component {...pageProps} />
-      <Script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></Script>
+      {/* <Script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></Script> */}
+      <Script src="/js/glider.js"></Script>
       {/* <Script src="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.js"></Script> */}
     </Fragment>
   );
