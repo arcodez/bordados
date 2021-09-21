@@ -27,7 +27,9 @@ export function PushbarMenu() {
           <i className="fas fa-times"></i>
         </button>
 
-        <a className="activo">Inicio</a>
+        <Link href="/">
+          <a className="activo">Inicio</a>
+        </Link>
         <a>Bordados</a>
         <a>Estampados</a>
 
@@ -38,7 +40,9 @@ export function PushbarMenu() {
         <a>Contacto</a>
 
         <div className="icons">
-          <i className="fas fa-shopping-cart"></i>
+          <Link href="/cart">
+            <i className="fas fa-shopping-cart"></i>
+          </Link>
           <i className="fab fa-instagram"></i>
         </div>
       </div>
