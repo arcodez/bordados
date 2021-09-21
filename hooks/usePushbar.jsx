@@ -91,8 +91,8 @@ export function usePushbar() {
     }
     setPushbar(
       new Pushbar({
+        // overlay: true,
         // blur: true,
-        overlay: true,
       })
     );
   }, []);
