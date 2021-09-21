@@ -42,19 +42,82 @@ export function ShoppingCart() {
         ))}
       </article>
 
-      <h3>Carrito</h3>
+      <h3 className="text-center">Carrito</h3>
+      <h3>Pedidos en el Carrito {cart.length}</h3>
 
-      <button onClick={clearCart}>Limpiar Carrito</button>
-      <article className="box">
-        {cart.map((item, index) => (
-          <CartItem key={index} data={item} delFromCart={delFromCart} />
-        ))}
-      </article>
-      <h4>Total ${total}</h4>
+      <div className="carrito">
+        <br />
+
+        <div className="items">
+          {cart.map((item, index) => (
+            <CartItem
+              key={index}
+              data={item}
+              delFromCart={delFromCart}
+              addToCart={addToCart}
+            />
+          ))}
+        </div>
+
+        <div className="total">
+          <div className="container">
+            <p>Total: </p>
+            <h2>{total} $</h2>
+            <button onClick={clearCart}>Limpiar Carrito</button>
+            <br />
+            <button>Pagar</button>
+          </div>
+        </div>
+      </div>
 
       <style jsx>{`
+        p {
+          font-size: 18px;
+        }
+
+        h2 {
+          margin-top: 0;
+          font-size: 36px;
+        }
+        .text-center {
+          text-align: center;
+          margin-bottom: 10px;
+        }
+        .carrito {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
         .box {
           display: flex;
+        }
+
+        .items {
+          width: 75%;
+          flex-direction: column;
+          border-radius: 10px;
+          padding: 10px;
+          background: var(--noche-clarac);
+          box-shadow: var(--shadow);
+        }
+
+        .total {
+          margin-left: 20px;
+          width: 20%;
+          background: var(--noche-clarac);
+          border-radius: 10px;
+          box-shadow: var(--shadow);
+        }
+
+        button {
+          width: 100%;
+          padding: 20px;
+          border: none;
+          border-radius: 5px;
+          margin: 5px 0;
+          font-weight: bold;
+          color: var(--blanco);
+          background: var(--noche-clara);
         }
 
         @media screen and (max-width: 800px) {
@@ -62,6 +125,25 @@ export function ShoppingCart() {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
           }
+        }
+
+        @media screen and (max-width: 768px) {
+          .carrito {
+            flex-wrap: wrap;
+          }
+          .total {
+            width: 100%;
+            margin: auto;
+            margin-bottom: 20px;
+            order: -1;
+          }
+          .items {
+            width: 100%;
+            margin: auto;
+          }
+        }
+
+        @media screen and (max-width: 576px) {
         }
       `}</style>
     </div>

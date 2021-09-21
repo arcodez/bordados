@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       {/* <div className="container"> */}
       <Header />
-      <Services />  
+      <Services />
       <Carousel />
       <Cards />
     </Layout>
