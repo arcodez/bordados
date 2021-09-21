@@ -145,6 +145,32 @@ export function CartItem({ data, delFromCart, addToCart }) {
             padding: 5px;
           }
         }
+
+        @media screen and (max-width: 576px) {
+          .image {
+            margin-top: 10px;
+            width: 100%;
+          }
+          .desc {
+            width: 100%;
+          }
+
+          .extra {
+            margin-top: 10px 0;
+            width: 100%;
+          }
+          .price {
+            display: flex;
+            margin: 0;
+            text-align: justify;
+            width: 100%;
+            align-items: center;
+          }
+
+          .botones {
+            margin-bottom: 10px;
+          }
+        }
       `}</style>
     </div>
   );
