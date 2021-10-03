@@ -41,7 +41,9 @@ export function PushbarMenu() {
 
         <div className="icons">
           <Link href="/cart">
-            <i className="fas fa-shopping-cart"></i>
+            <a>
+              <i className="fas fa-shopping-cart"></i>
+            </a>
           </Link>
           <i className="fab fa-instagram"></i>
         </div>

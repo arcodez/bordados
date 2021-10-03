@@ -120,6 +120,16 @@ export function ShoppingCart() {
           background: var(--noche-clara);
         }
 
+        @media screen and (max-width: 1320px) {
+          .items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            /* grid-template-columns: repeat(3, 1fr); */
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+          }
+        }
         @media screen and (max-width: 800px) {
           .box {
             display: grid;
@@ -131,6 +141,7 @@ export function ShoppingCart() {
           .carrito {
             flex-wrap: wrap;
           }
+
           .total {
             width: 100%;
             margin: auto;
@@ -140,6 +151,8 @@ export function ShoppingCart() {
           .items {
             width: 100%;
             margin: auto;
+            /* display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
           }
         }
 

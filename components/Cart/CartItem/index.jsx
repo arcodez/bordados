@@ -32,8 +32,6 @@ export function CartItem({ data, delFromCart, addToCart }) {
         .container {
           display: flex;
           margin: 0px;
-          /* background */
-          :red ;
           width: 100%;
           justify-content: space-between;
           border-bottom: 2px solid #fff;
@@ -51,8 +49,6 @@ export function CartItem({ data, delFromCart, addToCart }) {
           display: flex;
           width: 200px;
           align-items: center;
-          /* background */
-          :blue ;
         }
 
         img {
@@ -81,8 +77,6 @@ export function CartItem({ data, delFromCart, addToCart }) {
         .botones {
           display: flex;
           flex-direction: column;
-          /* background */
-          :peru ;
         }
 
         .botones button {
@@ -98,9 +92,10 @@ export function CartItem({ data, delFromCart, addToCart }) {
 
         .price {
           height: 100px;
-          /* background */
-          :blue ;
           text-align: right;
+          display: flex;
+          text-align: justify;
+          align-items: center;
         }
         .price h3 {
           margin: 5px;
@@ -116,38 +111,12 @@ export function CartItem({ data, delFromCart, addToCart }) {
 
         @media screen and (max-width: 992px) {
           .container {
-            /* flex-wrap: wrap; */
             align-items: center;
             justify-content: center;
           }
 
           .image {
             order: -2;
-          }
-
-          .extra {
-            margin-right: 20px;
-            width: 200px;
-          }
-          .price {
-            /* display: none; */
-          }
-
-          .botones {
-            flex-direction: row;
-            /* background */
-            :peru ;
-          }
-
-          .botones button {
-            order: 1;
-            margin: 0 5px;
-            padding: 5px;
-          }
-        }
-
-        @media screen and (max-width: 576px) {
-          .image {
             margin-top: 10px;
             width: 100%;
           }
@@ -160,14 +129,55 @@ export function CartItem({ data, delFromCart, addToCart }) {
             width: 100%;
           }
           .price {
-            display: flex;
             margin: 0;
-            text-align: justify;
             width: 100%;
+            display: flex;
+            text-align: justify;
             align-items: center;
           }
 
+          .botones button {
+            order: 1;
+            margin: 0 5px;
+            padding: 5px;
+          }
+
           .botones {
+            flex-direction: row;
+            margin-bottom: 10px;
+          }
+        }
+
+        @media screen and (max-width: 576px) {
+          .container {
+            /* flex-wrap: wrap; */
+            align-items: center;
+            justify-content: center;
+          }
+
+          .image {
+            order: -2;
+            margin-top: 10px;
+            width: 100%;
+          }
+
+          .desc {
+            width: 100%;
+          }
+
+          .extra {
+            margin-top: 10px 0;
+            width: 100%;
+          }
+
+          .botones button {
+            order: 1;
+            margin: 0 5px;
+            padding: 5px;
+          }
+
+          .botones {
+            flex-direction: row;
             margin-bottom: 10px;
           }
         }
