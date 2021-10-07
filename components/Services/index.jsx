@@ -1,12 +1,16 @@
 import styles from "./Services.module.css";
 import Link from "next/link";
 
-const ServiceCard = ({ desc = "", icono = "", url = "" }) => (
+const ServiceCard = ({
+  desc = "Lorem ipsum dolor sit.",
+  icono = "fas fa-fill-drip",
+  url = "#estampados",
+}) => (
   <div className="services_card">
-    <i className={icono || "fas fa-fill-drip"}></i>
-    <p>{desc || "Lorem ipsum dolor sit."}</p>
+    <i className={icono}></i>
+    <p>{desc}</p>
     <div className="card_button">
-      <Link href={`/examples${url}` || "/examples#estampados"}>
+      <Link href={`/examples${url}`}>
         <a className="button">Ver ejemplos</a>
       </Link>
     </div>

@@ -6,25 +6,32 @@ export function ExampleCard({
   return (
     <div className="example_card">
       {/* <h3>{type}</h3> */}
-      <figure className="card_image">
+      <div className="card_image">
         <img src={imgUrl} alt={name} />
-      </figure>
+      </div>
 
       <style jsx>{`
         .example_card {
-          width: 33.33%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-        }
-        .card_image {
-          width: 300px;
-        }
-        img {
-          width: 100%;
+          background: var(--noche-clarac);
+          box-shadow: var(--shadow);
+          transition: 0.5s all ease;
           border-radius: 10px;
         }
+
+        .example_card:hover {
+          transform: scale(1.1);
+        }
+
+        .card_image {
+          margin: 10px;
+        }
+
+        img {
+          object-fit: cover;
+          border-radius: 10px;
+          width: 100%;
+        }
+
         h3 {
           text-align: center;
         }
