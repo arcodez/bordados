@@ -9,7 +9,7 @@ function CardItem({
         <div className="lazo">
           <p>{title}</p>
         </div>
-        <div className="overlay"></div>
+        <div className="overlay">{title}</div>
       </div>
 
       <div className="text">
@@ -29,57 +29,67 @@ function CardItem({
           padding: 10px;
           width: 100%;
           border-radius: 10px;
-          background: var(--noche-clarac);
+          /* background: var(--noche-clarac); */
           margin-bottom: 20px;
+          background: #1da1f250;
         }
 
         img {
           width: 300px;
         }
 
-        .lazo {
-          /* -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg); */
-          position: absolute;
-          width: 100%;
-          background: green;
-          height: 50px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+        .card_img:hover img {
+          filter: blur(8px);
         }
 
-        .lazo p {
-          font-size: 30px;
-          color: white;
+        .lazo {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+          position: absolute;
+          left: -5.5em;
+          top: 1em;
+          color: #fff;
+          font-size: 13px;
+          font-weight: bold;
+          width: 20em;
+          text-align: center;
+          text-transform: uppercase;
+          background: green;
+          box-shadow: 2px 2px 10px rgb(0 0 0 / 50%);
+          z-index: 2;
+          line-height: 2.5em;
         }
 
         .overlay {
           /* background-color: rgba(0,0,0, .8); */
+          height: 0;
           border-radius: 10px;
           position: absolute;
           width: 100%;
-          height: 100%;
           background: #1da1f250;
+          text-align: center;
+          font-size: 40px;
+          font-family: "Open Sans";
+          text-transform: uppercase;
+          z-index: 1;
+          overflow: hidden;
           display: flex;
-          justify-content: flex-end;
-          flex-direction: column;
-          text-align: right;
+          justify-content: center;
+          align-items: center;
+          transition: 1s all;
         }
 
-        .overlay_text {
-          margin: 10px;
+        .card__item:hover .overlay {
+          height: 100%;
         }
 
         .card__item {
-          /* padding: 10px; */
-          /* background: var(--noche-clarac); */
-          /* border-top: 5px solid var(--azul); */
           border-radius: 10px;
-          /* box-shadow: 0 0 3px rgba(0, 0, 0, 0.5); */
           display: flex;
           flex-direction: column;
           align-items: center;
+          overflow: hidden;
+          transition: 1s all;
         }
 
         .text {
@@ -144,7 +154,7 @@ export function Cards() {
         </div>
       </div>
 
-      <style jsx global>{`
+      <style jsx>{`
         .card {
           /* background: #f2f2f2; */
         }
