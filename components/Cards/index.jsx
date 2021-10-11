@@ -20,10 +20,12 @@ function CardItem({ img = "", title = "" }) {
         figure img {
           width: 100%;
         }
+
         .card__item {
           padding: 20px;
           background: var(--noche-clarac);
           border-top: 5px solid var(--azul);
+          border-radius: 10px;
           box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
           display: flex;
           flex-direction: column;
