@@ -6,11 +6,14 @@ function CardItem({
     <div className="card__item">
       <div className="card_img">
         <img src={img} alt={title} className="image" />
+        <div className="lazo">
+          <p>{title}</p>
+        </div>
         <div className="overlay"></div>
       </div>
 
       <div className="text">
-        <h3 className="card__title">{title}</h3>
+        {/* <h3 className="card__title">{title}</h3> */}
         <p className="card__paragraph">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
           ab!
@@ -34,14 +37,38 @@ function CardItem({
           width: 300px;
         }
 
+        .lazo {
+          /* -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg); */
+          position: absolute;
+          width: 100%;
+          background: green;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .lazo p {
+          font-size: 30px;
+          color: white;
+        }
+
         .overlay {
           /* background-color: rgba(0,0,0, .8); */
           border-radius: 10px;
           position: absolute;
           width: 100%;
           height: 100%;
-          background: var(--azul);
-          opacity: 0.5;
+          background: #1da1f250;
+          display: flex;
+          justify-content: flex-end;
+          flex-direction: column;
+          text-align: right;
+        }
+
+        .overlay_text {
+          margin: 10px;
         }
 
         .card__item {
