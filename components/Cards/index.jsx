@@ -4,13 +4,11 @@ function CardItem({
 }) {
   return (
     <div className="card__item">
-      <figure>
+      <div className="card_img">
         <img src={img} alt={title} className="image" />
         <div className="overlay"></div>
-        {/* <div className="card__img">
-          <img src={img} alt={title} />
-        </div> */}
-      </figure>
+      </div>
+
       <div className="text">
         <h3 className="card__title">{title}</h3>
         <p className="card__paragraph">
@@ -20,31 +18,30 @@ function CardItem({
       </div>
 
       <style jsx>{`
-
-      figure {
-        width: 100%;
-      }
-
-      figure img {
-        
-
-        }
-
-        .image {
+        .card_img {
           position: relative;
-          padding: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
           width: 100%;
           border-radius: 10px;
           background: var(--noche-clarac);
+          margin-bottom: 20px;
         }
 
-        .image::before  {
+        img {
+          width: 300px;
+        }
+
+        .overlay {
+          /* background-color: rgba(0,0,0, .8); */
+          border-radius: 10px;
           position: absolute;
-          background-color: rgba(0,0,0, .8);
-          top:0;
-          bottom: 0;
-          right: 0;
-          left: 0;
+          width: 100%;
+          height: 100%;
+          background: var(--azul);
+          opacity: 0.5;
         }
 
         .card__item {
@@ -57,21 +54,12 @@ function CardItem({
           flex-direction: column;
           align-items: center;
         }
-        
-        .card__img {
-          border-radius: 50%
-          margin-top: 20px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
 
         .text {
           border-radius: 10px;
           background: green;
           background: var(--noche-clarac);
           padding: 0 10px;
-
         }
 
         .card__title {
