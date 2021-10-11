@@ -1,57 +1,92 @@
-function CardItem({ img = "", title = "" }) {
+function CardItem({
+  img = "https://colormake.com/wp-content/uploads/2014/08/gorras.png",
+  title = "Gorras",
+}) {
   return (
     <div className="card__item">
       <figure>
-        <img
-          src={
-            img || "https://colormake.com/wp-content/uploads/2014/08/gorras.png"
-          }
-          alt=""
-        />
+        <img src={img} alt={title} className="image" />
+        <div className="overlay"></div>
         {/* <div className="card__img">
-          <img src="" alt="" />
+          <img src={img} alt={title} />
         </div> */}
       </figure>
-      <h3 className="card__title">{title || "Gorras"}</h3>
-      <p className="card__paragraph">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, ab!
-      </p>
+      <div className="text">
+        <h3 className="card__title">{title}</h3>
+        <p className="card__paragraph">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
+          ab!
+        </p>
+      </div>
+
       <style jsx>{`
-        figure img {
+
+      figure {
+        width: 100%;
+      }
+
+      figure img {
+        
+
+        }
+
+        .image {
+          position: relative;
+          padding: 20px;
           width: 100%;
+          border-radius: 10px;
+          background: var(--noche-clarac);
+        }
+
+        .image::before  {
+          position: absolute;
+          background-color: rgba(0,0,0, .8);
+          top:0;
+          bottom: 0;
+          right: 0;
+          left: 0;
         }
 
         .card__item {
-          padding: 20px;
-          background: var(--noche-clarac);
-          border-top: 5px solid var(--azul);
+          /* padding: 10px; */
+          /* background: var(--noche-clarac); */
+          /* border-top: 5px solid var(--azul); */
           border-radius: 10px;
-          box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+          /* box-shadow: 0 0 3px rgba(0, 0, 0, 0.5); */
           display: flex;
           flex-direction: column;
           align-items: center;
         }
-
+        
         .card__img {
-          background: #ffff;
-          width: 80px;
-          height: 80px;
-          border-radius: 50%;
+          border-radius: 50%
           margin-top: 20px;
           display: flex;
           justify-content: center;
           align-items: center;
         }
 
+        .text {
+          border-radius: 10px;
+          background: green;
+          background: var(--noche-clarac);
+          padding: 0 10px;
+
+        }
+
         .card__title {
           margin: 20px 0;
           font-size: 1.5rem;
+          text-align: center;
         }
 
         .card__paragraph {
           font-weight: 300;
-          margin-bottom: 20px;
+          text-align: justify;
+          padding: 0 10px;
+          /* margin-bottom: 20px; */
         }
+
         .card__item:nth-last-of-type(1) {
           grid-area: card1;
         }
