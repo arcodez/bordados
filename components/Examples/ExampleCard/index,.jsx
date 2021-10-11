@@ -4,36 +4,20 @@ export function ExampleCard({
   type = "Bordado",
 }) {
   return (
-    <div className="example_card">
-      {/* <h3>{type}</h3> */}
-      <div className="card_image">
-        <img src={imgUrl} alt={name} />
-      </div>
-
+    <div className="image">
+      <img src={imgUrl} alt="" />
       <style jsx>{`
-        .example_card {
-          background: var(--noche-clarac);
-          box-shadow: var(--shadow);
-          transition: 0.5s all ease;
-          border-radius: 10px;
-        }
-
-        .example_card:hover {
-          transform: scale(1.1);
-        }
-
-        .card_image {
-          margin: 10px;
-        }
-
         img {
-          object-fit: cover;
-          border-radius: 10px;
-          width: 100%;
+          max-width: 100%;
         }
 
-        h3 {
-          text-align: center;
+        .image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 5px;
+          outline: 3px solid white;
+          outline-offset: -10px;
         }
       `}</style>
     </div>
