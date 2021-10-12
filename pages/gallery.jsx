@@ -40,8 +40,8 @@ const Image = ({
 
 const gallery = () => (
   <div className="gallery">
-    {images.map((image) => (
-      <Image {...image} />
+    {images.map((image, index) => (
+      <Image key={index} {...image} />
     ))}
     <style jsx>{`
       .gallery {
