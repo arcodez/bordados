@@ -6,17 +6,17 @@ export function ExampleCard({
   return (
     <div className="image">
       <img src={imgUrl} alt="" />
+
       <style jsx>{`
         img {
           max-width: 100%;
         }
 
         .image {
-          display: flex;
           justify-content: center;
           align-items: center;
           margin-bottom: 5px;
-          outline: 3px solid white;
+          outline: 3px solid #ffff;
           outline-offset: -10px;
         }
       `}</style>

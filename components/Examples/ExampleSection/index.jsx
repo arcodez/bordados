@@ -105,10 +105,10 @@ export function ExampleSection({
       <style jsx>{`
         .gallery {
           width: 90%;
-          margin: 10px auto;
+          margin: 50px auto;
           columns: 5 250px;
           column-gap: 10px;
-          overflow: hidden;
+          /* overflow: hidden; */
         }
       `}</style>
     </div>
