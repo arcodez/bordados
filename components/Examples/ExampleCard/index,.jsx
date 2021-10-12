@@ -10,14 +10,14 @@ export function ExampleCard({
       <style jsx>{`
         img {
           max-width: 100%;
+          outline: 3px solid #ffff;
+          outline-offset: -10px;
         }
 
         .image {
           justify-content: center;
           align-items: center;
           margin-bottom: 5px;
-          outline: 3px solid #ffff;
-          outline-offset: -10px;
         }
       `}</style>
     </div>

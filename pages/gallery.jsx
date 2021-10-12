@@ -43,6 +43,7 @@ const gallery = () => (
     {images.map((image, index) => (
       <Image key={index} {...image} />
     ))}
+
     <style jsx>{`
       .gallery {
         width: 90%;

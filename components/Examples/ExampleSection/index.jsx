@@ -97,12 +97,31 @@ export function ExampleSection({
   ],
 }) {
   return (
-    <div className="gallery">
-      {card_data.map((image, index) => (
-        <ExampleCard key={index} {...image} />
-      ))}
+    <div className="example_section">
+      <div className="title">
+        <h2>{name}</h2>
+      </div>
+      <div className="gallery">
+        {card_data.map((image, index) => (
+          <ExampleCard key={index} {...image} />
+        ))}
+      </div>
 
       <style jsx>{`
+        h2 {
+          border-bottom: 1px solid var(--azul);
+        }
+
+        .title {
+          width: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          text-transform: capitalize;
+          margin-bottom: -20px;
+        }
+
         .gallery {
           width: 90%;
           margin: 50px auto;
