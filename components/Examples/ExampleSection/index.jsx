@@ -109,11 +109,10 @@ export function ExampleSection({
 
       <style jsx>{`
         h2 {
-          border-bottom: 1px solid var(--azul);
+          border-bottom: 3px solid var(--azul);
         }
 
         .title {
-          width: 50px;
           display: flex;
           justify-content: center;
           align-items: center;
