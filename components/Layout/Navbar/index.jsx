@@ -1,27 +1,10 @@
 //import * as styles from "./style.js";
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import { PushbarMenu } from "./PushbarMenu";
+import { useHandleNavbar } from "../../../hooks/useHandleNavbar"
 
 export const Navbar = () => {
-  const [theme, setTheme] = useState({
-    active: "off",
-    icon: "/sun.svg",
-  });
-
-  function handleActivo() {
-    if (theme.active === "off") {
-      setTheme({
-        active: "on",
-        icon: "/moon.svg",
-      });
-    } else {
-      setTheme({
-        active: "off",
-        icon: "/sun.svg",
-      });
-    }
-  }
+  const { theme, handleActivo } = useHandleNavbar()
 
   return (
     <header className="header">

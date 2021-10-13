@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import "../styles/globals.css";
+import "../styles/navbar.css";
 import Head from "next/head";
 import Script from "next/script";
 
