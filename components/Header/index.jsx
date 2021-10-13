@@ -19,14 +19,15 @@ export const Header = () => {
       <div className="box">
         <div className="card_container">
           <div className="card">
-          <div className="sub_card">
-          <img
-              src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_180094648_118134.jpg"
-              alt=""
-            />
-            <p>Vuelve realidad todas tus ideas </p>
+            <div className="sub_card">
+              <img
+                src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_180094648_118134.jpg"
+                alt=""
+              />
+              <p>Vuelve realidad todas tus ideas </p>
+            </div>
           </div>
-          </div>
+          
           <div className="card">
             <div className="sub_card">
               <i className="fas fa-check-circle"></i>
@@ -66,8 +67,14 @@ export const Header = () => {
           width: 30%;
           margin: auto;
           padding-bottom: 10px;
+          animation: textAnimated 2s;
         }
 
+        @keyframes textAnimated {
+          0% {
+            transform: translateY(-400%);
+          }
+        }
         .box {
           min-height: 300px;
           /* height: 400px; */
@@ -117,6 +124,28 @@ export const Header = () => {
           width: 100%;
           margin: 10px auto;
           padding: 10px;
+        }
+
+        .card:nth-child(1) {
+          animation: imageAnimation 2s;
+          transition: 2s all;
+        }
+
+        .card:nth-child(2) {
+          animation: imageAnimation2 2s;
+          transition: 2s all;
+        }
+
+        @keyframes imageAnimation {
+          0% {
+            transform: translate(-400%);
+          }
+          
+        } 
+        @keyframes imageAnimation2 {
+          0% {
+            transform: translate(400%);
+          }
         }
 
         .precios {
