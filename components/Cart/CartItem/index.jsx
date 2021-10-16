@@ -1,7 +1,7 @@
 export function CartItem({ data, delFromCart, addToCart }) {
   let { id, name, price, quantity } = data;
   return (
-    <div className="container">
+    <div className="card-item">
       <div className="image">
         <img
           src="https://i.pinimg.com/564x/08/06/68/080668d46e97693237d3eb79c23baf69.jpg"
@@ -29,7 +29,7 @@ export function CartItem({ data, delFromCart, addToCart }) {
       </div>
 
       <style jsx>{`
-        .container {
+        .card-item {
           display: flex;
           margin: 0px;
           width: 100%;
