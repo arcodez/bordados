@@ -20,7 +20,7 @@ export function useHandleNavbar() {
     }
   }
 
-  useEffect(() => {
+  const Navbar2 = () => {
     const navToggle = document.querySelector(".nav-toggle");
     const navMenu = document.querySelector(".nav-menu");
     const navbar = document.querySelector(".header-nav");
@@ -42,6 +42,10 @@ export function useHandleNavbar() {
         navToggle.setAttribute("aria-label", "Abrir menú");
       }
     });
+  };
+
+  useEffect(() => {
+    Navbar2();
   }, []);
 
   return { theme, handleActivo };
