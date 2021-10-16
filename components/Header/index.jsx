@@ -27,7 +27,7 @@ export const Header = () => {
               <p>Vuelve realidad todas tus ideas </p>
             </div>
           </div>
-          
+
           <div className="card">
             <div className="sub_card">
               <i className="fas fa-check-circle"></i>
@@ -52,12 +52,13 @@ export const Header = () => {
 
       <style jsx>{`
         .header {
+          overflow: hidden;
           width: 90%;
           margin: auto;
           left: 0;
           right: 0;
           padding: 10px;
-        } 
+        }
 
         .header span {
           color: var(--azul);
@@ -104,7 +105,7 @@ export const Header = () => {
           min-height: 200px;
           min-width: 45%;
           width: 90%;
-          margin: 20px; 
+          margin: 20px;
           border-radius: 20px;
           /* background-color: var(--noche-clara); */
           display: flex;
@@ -140,8 +141,7 @@ export const Header = () => {
           0% {
             transform: translate(-400%);
           }
-          
-        } 
+        }
         @keyframes imageAnimation2 {
           0% {
             transform: translate(400%);
@@ -170,7 +170,6 @@ export const Header = () => {
           .card_container {
             flex-wrap: wrap;
           }
-
         }
 
         @media screen and (max-width: 580px) {
