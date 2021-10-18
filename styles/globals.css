@@ -19,6 +19,7 @@ body {
   background: var(--noche-clara);
   color: white;
   /* padding: 0; */
+  padding: 40px 0 0;
   margin: 0;
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
