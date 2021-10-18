@@ -683,14 +683,17 @@ export default function Examples() {
         name="serigrafia"
         desc="La que usa Como una Caja de Pintura"
         card_data={serigrafia}
+        link="serigrafia"
       />
       <ExampleSection
+        link="estampados"
         name="estampado"
         desc="La que se hace con Pintura"
         card_data={estampados}
       />
 
       <ExampleSection
+        link="sublimacion"
         name="sublimacion"
         desc="La mas perrona de Todas, se hace con Planchas de Calor"
         card_data={sublimaciones}

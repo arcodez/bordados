@@ -4,13 +4,13 @@ import Link from "next/link";
 const ServiceCard = ({
   desc = "Lorem ipsum dolor sit.",
   icono = "fas fa-fill-drip",
-  url = "#estampados",
+  url = "estampados",
 }) => (
   <div className="services_card">
     <i className={icono}></i>
     <p>{desc}</p>
     <div className="card_button">
-      <Link href={`/examples${url}`}>
+      <Link href={`/examples#${url}`}>
         <a className="button">Ver ejemplos</a>
       </Link>
     </div>
@@ -68,20 +68,21 @@ export const Services = () => {
 
       <div className="services_cards">
         <ServiceCard desc="Estampados" />
+
         <ServiceCard
           desc="Bordados"
           icono={"fas fa-graduation-cap"}
-          url="#bordados"
+          url="bordados"
         />
         <ServiceCard
           desc="Sublimacion"
           icono={"far fa-images"}
-          url="#sublimacion"
+          url="sublimacion"
         />
         <ServiceCard
           desc="Serigrafia"
           icono={"fas fa-brush"}
-          url="#serigrafia"
+          url="serigrafia"
         />
       </div>
 

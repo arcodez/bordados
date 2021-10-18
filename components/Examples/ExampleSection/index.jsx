@@ -3,6 +3,7 @@ import { ExampleCard } from "../ExampleCard/index,";
 
 export function ExampleSection({
   name = "bordados",
+  link = "bordados",
   desc = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni dolore reiciendis corrupti cupiditate ullam nemo. Ducimus dignissimos omnis eaque ullam.",
   card_data = [
     {
@@ -97,7 +98,7 @@ export function ExampleSection({
   ],
 }) {
   return (
-    <div className="example_section">
+    <div id={link} className="example_section">
       <div className="title">
         <h2>{name}</h2>
       </div>
