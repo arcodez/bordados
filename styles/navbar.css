@@ -113,9 +113,11 @@ ul {
   body {
     padding-top: 20px;
   }
+
   .header-nav {
     height: 60px;
   }
+
   .logo {
     justify-content: center;
     align-items: center;
@@ -175,7 +177,7 @@ ul {
 /* Align Items */
 @media screen and (max-width: 500px) {
   body {
-    position: absolute;
+    /* position: absolute; */
     padding: 30px 0 0;
   }
 }

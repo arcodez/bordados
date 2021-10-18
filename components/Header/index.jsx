@@ -139,12 +139,12 @@ export const Header = () => {
 
         @keyframes imageAnimation {
           0% {
-            transform: translate(-400%);
+            transform: translate(-300%);
           }
         }
         @keyframes imageAnimation2 {
           0% {
-            transform: translate(400%);
+            transform: translate(300%);
           }
         }
 
