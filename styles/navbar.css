@@ -1,3 +1,6 @@
+body {
+  padding: 40px 0 0;
+}
 .logo_img {
   width: 25px;
   margin: 0 5px;
@@ -169,5 +172,12 @@ ul {
     outline: none;
   }
   .icons {
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    position: absolute;
+    padding: 30px 0 0;
   }
 }
