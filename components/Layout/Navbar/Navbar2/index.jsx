@@ -41,7 +41,7 @@ export const Navbar2 = () => {
                 </Link>
               </li>
               <li className="nav-menu-item">
-                <Link href="#bordados">
+                <Link href="/examples#bordados">
                   <a className="nav-menu-link nav-link">Bordados</a>
                 </Link>
               </li>
