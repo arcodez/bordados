@@ -35,7 +35,7 @@ export function CartItem({ data, delFromCart, addToCart }) {
           width: 100%;
           justify-content: space-between;
           border-bottom: 2px solid #fff;
-          flex-wrap: wrap;
+          // flex-wrap: wrap;
         }
 
         p {
@@ -107,6 +107,12 @@ export function CartItem({ data, delFromCart, addToCart }) {
 
         .price h5 {
           margin: 5px;
+        }
+
+        @media screen and (max-width: 1320px) {
+          .card-item {
+            flex-wrap: wrap;
+          }
         }
 
         @media screen and (max-width: 992px) {
