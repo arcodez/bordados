@@ -97,6 +97,7 @@ export function CartItem({ data, delFromCart, addToCart }) {
           text-align: justify;
           align-items: center;
         }
+        
         .price h3 {
           margin: 5px;
         }
