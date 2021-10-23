@@ -18,11 +18,13 @@
 }
 
 .nav {
+  max-width: 1360px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
 }
-
+ 
 .logo {
   display: flex;
   font-size: 30px;
