@@ -63,7 +63,7 @@ export const Navbar2 = () => {
                 </Link>
               </li>
               <li className="nav-menu-item">
-                <Link href="#">
+                <Link href="/faq">
                   <a className="nav-menu-link ">F.A.Q</a>
                 </Link>
               </li>
@@ -97,3 +97,4 @@ export const Navbar2 = () => {
     </>
   );
 };
+
