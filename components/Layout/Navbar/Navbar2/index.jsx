@@ -68,7 +68,7 @@ export const Navbar2 = () => {
                 </Link>
               </li>
               <li className="nav-menu-item agarrar">
-                <Link href="#">
+                <Link href="/contact">
                   <a className="nav-menu-link ">Contacto</a>
                 </Link>
               </li>
