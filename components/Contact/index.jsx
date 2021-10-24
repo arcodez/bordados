@@ -34,7 +34,7 @@ export const Contact = () => (
 
             <div className="contact-icon">
                 <div className="icon">
-                    <img src="https://cdn-icons.flaticon.com/png/512/2072/premium/2072130.png?token=exp=1635090224~hmac=082dda2c15218ffa15d32e7dcdb25034" alt="" />
+                    <img src="/world.png" alt="" />
                 </div>
 
                 <div className="contact-info">
