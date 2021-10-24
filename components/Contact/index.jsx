@@ -43,47 +43,50 @@ export const Contact = () => (
             </div>
         </div>
 
-            <div className="contact-section">
-                <div className="contact-form">
-                    <h2>Contact Us</h2>
+        <div className="contact-section">
+            <div className="contact-form">
+                <h2>Contact Us</h2>
 
-                    <form action="">
-                        <div className="two-form">
-                            <div className="form-group">
-                                <label className="label" htmlFor="name">Name</label>
-                                <input className="form-control" type="text" placeholder="Name" />
-                            </div>
-                            <div className="form-group">
-                                <label className="label" htmlFor="email">Email</label>
-                                <input className="form-control" type="email" placeholder="Name" />
-                            </div>
-                        </div>
-
+                <form action="">
+                    <div className="two-form">
                         <div className="form-group">
-                            <label className="label" htmlFor="name">Subjet</label>
-                            <input className="form-control" type="text" placeholder="Subjet" />
+                            <label className="label" htmlFor="name">Name</label>
+                            <input className="form-control" type="text" placeholder="Name" />
                         </div>
                         <div className="form-group">
-                            <label className="label" htmlFor="name">Message</label>
-                            <input className="form-control" type="text" placeholder="Message" />
+                            <label className="label" htmlFor="email">Email</label>
+                            <input className="form-control" type="email" placeholder="Name" />
                         </div>
-                        <button className="btn btn-primary" type="submit">Send Message</button>
-                    </form>
-                </div>
+                    </div>
 
-                <div className="contact-image">
-                    <img src="/contact.svg" alt="Contact Image" />
-                </div>
+                    <div className="form-group">
+                        <label className="label" htmlFor="name">Subjet</label>
+                        <input className="form-control" type="text" placeholder="Subjet" />
+                    </div>
+                    <div className="form-group">
+                        <label className="label" htmlFor="name">Message</label>
+                        <input className="form-control" type="text" placeholder="Message" />
+                    </div>
+                    <button className="btn btn-primary" type="submit">Send Message</button>
+                </form>
             </div>
+
+            <div className="contact-image">
+                <img src="/contact.svg" alt="Contact Image" />
+            </div>
+        </div>
 
 
         <style jsx>{`
         .contact {
-            height: 100vh;
+            min-height: 100vh;
         }
 
         .contact_title {
             text-align: center;
+            border-bottom: 3px solid var(--azul);
+            width: 20%;
+            margin: 0 auto 20px;
         }
 
         .contact-icons {
@@ -95,13 +98,13 @@ export const Contact = () => (
         }
 
         .contact-icon {
-            min-width: 100px;
+            /* min-width: 100px; */
             display: flex;
             justify-content: center;
             align-items: center;
         }
         .icon {
-            width: 130px;
+            width: 120px;
             background-color: var(--azul);
             border-radius: 100%;
             padding: 30px;
@@ -120,17 +123,13 @@ export const Contact = () => (
             grid-template-columns: repeat(2, 1fr);
             /* background: red; */
             width: 90%;
-            margin: 0 auto 200px;
-            /* margin-bottom: 100px; */
+            margin: 0 auto;
             position: relative;
 
         };
 
         .contact-form {
             /* background: green; */
-            /* display: flex; */
-            /* flex-direction: column;  */
-            /* align-items: center; */
             padding: 0 10px;    
             margin: 0 20px;
             margin-left: 25%;   
@@ -334,14 +333,23 @@ input{overflow:visible;}
             right: 10%;
         }
     }
-    
+
     @media screen and (max-width: 735px) {
         .contact-icons {
             grid-template-columns: 1fr 1fr;
             gap: 10px; 
+            margin-bottom: 40px;
         }
         .contact-section {
             grid-template-columns: 1fr;
+        }
+        .form-group:nth-child(1) {
+            margin-right: 0;
+        }
+
+        .two-form {
+            grid-template-columns: 1fr;
+
         }
         .contact-form {
             margin-left: 0;
@@ -353,6 +361,9 @@ input{overflow:visible;}
         }
      }
     
+     @media screen and (max-width: 400px) {
+   
+     }
 
         `}</style>
     </div>

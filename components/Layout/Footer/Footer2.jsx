@@ -8,8 +8,7 @@ export const Footer2 = () => {
             <style jsx>{`
                 .footer-2 { 
                     background-color: var(--noche-clarac);
-                    padding: 15px 0;
-                    margin-top: 20%;   
+                    padding: 15px;
                  }
                  .container {	
                      text-align: center;
