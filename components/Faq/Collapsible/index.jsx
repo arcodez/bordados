@@ -64,7 +64,7 @@ export const Collapsible = () => {
     <div className="wrapper">
         <div className="accordion">
             {DataQuestions.map((item, index) => (
-                <ItemCollapsible {...item} index={index} selected={selected} toggle={toggle} />
+                <ItemCollapsible {...item} key={index} index={index} selected={selected} toggle={toggle} />
             ))}
         </div>
     </div>
