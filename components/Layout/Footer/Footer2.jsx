@@ -9,6 +9,7 @@ export const Footer2 = () => {
                 .footer-2 { 
                     background-color: var(--noche-clarac);
                     padding: 15px 0;
+                    margin-top: 20%;   
                  }
                  .container {	
                      text-align: center;
