@@ -1,16 +1,13 @@
 import { useEffect, useState } from "react";
 
-const CarouselItem = ({ name = "", img = "" }) => (
+const CarouselItem = ({ name = "Rock and Roll Hall of Fame", img ="https://mymodernmet.com/wp/wp-content/uploads/2020/06/needle-painting-embroidery-emillie-ferris-12.jpg" }) => (
   <div className="carousel__elemento">
     <img
-      src={
-        img ||
-        "https://mymodernmet.com/wp/wp-content/uploads/2020/06/needle-painting-embroidery-emillie-ferris-12.jpg"
-      }
-      alt={name || "Rock and Roll Hall of Fame"}
+      src={img}
+      alt={name}
     />
 
-    <p>{name || "Rock and Roll Hall of Fame"}</p>
+    <p>{name}</p>
     <style jsx>{`
       .carousel__elemento {
         text-align: center;
@@ -40,6 +37,7 @@ export function Carousel() {
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: ".carousel__indicadores",
+        draggable: true,
         arrows: {
           prev: ".carousel__anterior",
           next: ".carousel__siguiente",
