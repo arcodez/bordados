@@ -44,7 +44,7 @@ export const About = () => {
                     align-items: center;
                     outline: 3px solid white;
                     outline-offset: -10px;
-                    outline-bir
+                  
                 }   
                 .about_image img {
                     width: 100%;
