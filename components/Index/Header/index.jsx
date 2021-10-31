@@ -81,17 +81,9 @@ export const Header = () => {
           /* height: 400px; */
           padding: 20px;
           border-radius: 20px;
-          background: #2193b0; /* fallback for old browsers */
-          background: -webkit-linear-gradient(
-            to right,
-            #6dd5ed,
-            #2193b0
-          ); /* Chrome 10-25, Safari 5.1-6 */
-          background: linear-gradient(
-            to right,
-            #6dd5ed,
-            #2193b0
-          ); /* W3C, IE 10+/Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+          background: #2193b0;
+          background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
+          background: linear-gradient(to right, #6dd5ed, #2193b0);
           box-shadow: var(--shadow);
         }
 

@@ -4,6 +4,7 @@ import { Header } from "../components/Index/Header";
 import { Services } from "../components/Index/Services";
 import { Carousel } from "../components/Index/Carousel";
 import { Cards } from "../components/Index/Cards";
+import { Information } from "../components/Index/Information";
 
 export default function Home() {
   return (
@@ -11,11 +12,11 @@ export default function Home() {
       <Head>
         <title>Bordados || Margarita</title>
       </Head>
-      {/* <div className="container"> */}
       <Header />
       <Services />
       <Carousel />
       <Cards />
+      <Information />
     </Layout>
   );
 }
