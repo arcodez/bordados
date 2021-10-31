@@ -42,13 +42,14 @@ export const About = () => {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    outline: 3px solid white;
-                    outline-offset: -10px;
+                    
                   
                 }   
                 .about_image img {
                     width: 100%;
                     border-radius: 10px;
+                    outline: 3px solid white;
+                    outline-offset: -10px;
                 }
 
                 .about_text {
@@ -64,6 +65,21 @@ export const About = () => {
                 }
                 .about_info {
                     text-align: justify;
+                }
+                @media (max-width: 980px) { 
+                    .about {
+                        grid-template-columns: 1fr 3fr;
+                    }
+
+                }
+
+                @media (max-width: 768px) { 
+                    .about {
+                        grid-template-columns: 1fr;
+                     } 
+                    .about_image {
+                        order: 2;
+                    }
                 }
         `}</style>
             </div>
