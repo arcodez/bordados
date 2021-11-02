@@ -112,9 +112,6 @@ const InfoSection = ({
 export const Information = () => {
   return (
     <div className="information">
-      {/* <InfoSection />
-      <InfoSection changeOrder /> */}
-
       {data.map((item, index) => (
         <InfoSection {...item} key={index} changeOrder={!index % 2 === 0} />
       ))}

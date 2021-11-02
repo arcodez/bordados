@@ -15,6 +15,6 @@ export const data = [
     quest: "¿Que es la sublimacion?",
     title: "la sublimacion",
     img: "https://www.ezedichi.com/blog/wp-content/uploads/2020/08/Posibilidades-impresion-por-sublimacion.png",
-    desc: "¿Te estás adentrando en el mundo de la personalización? Si estás decidido a iniciar un negocio de regalos personalizados, la sublimación es una de las técnicas más fáciles de aprender y con unos resultados fantásticos que genera imágenes de máxima calidad gráfica.",
+    desc: "La sublimación textil es una técnica que se utiliza mayoritariamente para personalizar o imprimir prendas blancas de poliéster 100%. Es el sistema de impresión ideal para las prendas técnicas ya que permite la transpiración.El calor normalmente se aplica con una prensa o plancha térmica.",
   },
 ];
