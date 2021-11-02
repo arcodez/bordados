@@ -1,30 +1,117 @@
 import React from "react";
+import { data } from "./data";
+
+const InfoSection = ({
+  img = "https://www.serigrafiaiorgi.com/wp-content/uploads/serigrafia-iorgi-serigrafia-digital.jpg",
+  quest = "¿Que es la serigrafia?",
+  desc = `La serigrafía es una técnica de impresión en el método de reproducción de documentos e imágenes sobre cualquier material, y consiste en transferir una tinta a través de una malla tensada en un marco.`,
+  title = "la serigrafia",
+  changeOrder = false,
+}) => (
+  <div className="info_section container">
+    <div className="title">
+      <h2>{quest}</h2>
+      <div className="title-image">
+        <img src={img} alt={title} />
+      </div>
+    </div>
+
+    <div className="info">
+      <h3>
+        <b>{title}</b>
+      </h3>
+      <p>{desc}</p>
+    </div>
+
+    <style jsx>{`
+      .info_section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        border-radius: 10px;
+      }
+
+      .bg {
+        background: var(--noche-clara);
+      }
+
+      .bg2 {
+        background: var(--noche-clarac);
+        border-radius: 0 10px 10px 0;
+      }
+
+      .title,
+      .info {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .title h2 {
+        border-bottom: 4px solid var(--noche-clarac);
+        font-size: 40px;
+        padding: 10px 0;
+        margin: 10px 0;
+      }
+
+      .info {
+        /* border-top-right-radius: 10px; */
+        order: ${changeOrder && "-1"};
+        padding: 0 20px;
+      }
+
+      .info h3 {
+        font-size: 20px;
+        text-transform: uppercase;
+        border-bottom: 4px solid var(--noche-clarac);
+      }
+
+      .info p {
+        font-size: 20px;
+        text-align: justify;
+      }
+
+      .title-image {
+        align-items: center;
+        display: flex;
+        width: 80%;
+        justify-content: center;
+        padding-top: 0;
+        padding-bottom: 20px;
+      }
+      .title-image img {
+        width: 100%;
+        border-radius: 20px;
+      }
+
+      @media screen and (max-width: 992px) {
+        .info_section {
+          grid-template-columns: 1fr;
+        }
+        .title-image {
+          width: 70%;
+        }
+      }
+
+      @media screen and (max-width: 576px) {
+        .title h2 {
+          font-size: 30px;
+        }
+      }
+    `}</style>
+  </div>
+);
 
 export const Information = () => {
   return (
     <div className="information">
-      <div className="info_section container">
-        <div className="title">
-          <h2>¿Que es la serigrafia?</h2>
-          <div className="title-image">
-            <img
-              src="https://lh3.googleusercontent.com/proxy/2DAWkGYgTCghdwCwg4aTsW_DtuZSkoeiHnl5iWLphTRRgkDzlhV-RDnPy_MZsAidNulLbKuSGZoeHo3OhgP_-QGP92wNokw8AszIsMYK_dXOMeuUfWaE"
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="info">
-          <h3>
-            <b>La serigrafia</b>
-          </h3>
-          <p>
-            La serigrafía es una técnica de impresión en el método de
-            reproducción de documentos e imágenes sobre cualquier material, y
-            consiste en transferir una tinta a través de una malla tensada en un
-            marco.
-          </p>
-        </div>
-      </div>
+      {/* <InfoSection />
+      <InfoSection changeOrder /> */}
+
+      {data.map((item, index) => (
+        <InfoSection {...item} key={index} changeOrder={!index % 2 === 0} />
+      ))}
 
       <style jsx>{`
         .information {
@@ -36,56 +123,6 @@ export const Information = () => {
           min-height: 400px;
           width: 100%;
           padding: 40px 0;
-        }
-
-        .info_section {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          background: var(--noche-clara);
-          border-radius: 10px;
-        }
-
-        .title,
-        .info {
-          align-items: center;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-        .title h2 {
-          border-bottom: 4px solid var(--azul);
-          font-size: 40px;
-          padding: 10px 0;
-          margin: 10px 0;
-        }
-        .info {
-          background: var(--noche-clarac);
-          border-radius: 0 10px 10px 0;
-          /* border-top-right-radius: 10px; */
-          padding: 0 20px;
-        }
-
-        .info h3 {
-          font-size: 20px;
-          text-transform: uppercase;
-          border-bottom: 4px solid var(--azul);
-        }
-
-        .info p {
-          font-size: 20px;
-          text-align: justify;
-        }
-
-        .title-image {
-          align-items: center;
-          display: flex;
-          width: 80%;
-          justify-content: center;
-          padding-top: 0;
-          padding-bottom: 20px;
-        }
-        .title-image img {
-          border-radius: 20px;
         }
       `}</style>
     </div>
