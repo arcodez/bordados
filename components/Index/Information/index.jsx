@@ -25,10 +25,9 @@ const InfoSection = ({
 
     <style jsx>{`
       .info_section {
+        border-radius: 10px;
         display: grid;
         grid-template-columns: 1fr 1fr;
-
-        border-radius: 10px;
       }
 
       .bg {
@@ -62,30 +61,37 @@ const InfoSection = ({
       }
 
       .info h3 {
+        border-bottom: 4px solid var(--noche-clarac);
         font-size: 20px;
         text-transform: uppercase;
-        border-bottom: 4px solid var(--noche-clarac);
       }
 
       .info p {
+        background: var(--noche-clarac);
+        border-radius: 10px;
+        box-shadow: var(--shadow);
         font-size: 20px;
+        padding: 16px;
         text-align: justify;
       }
 
       .title-image {
         align-items: center;
         display: flex;
-        width: 80%;
         justify-content: center;
         padding-top: 0;
         padding-bottom: 20px;
+        width: 80%;
       }
       .title-image img {
-        width: 100%;
         border-radius: 20px;
+        width: 100%;
       }
 
       @media screen and (max-width: 992px) {
+        .title {
+          order: -2;
+        }
         .info_section {
           grid-template-columns: 1fr;
         }
