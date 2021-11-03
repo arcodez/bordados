@@ -1,6 +1,6 @@
 import { images } from "../../../pages/gallery";
 import { ExampleCard } from "../ExampleCard/index,";
-import { data } from "./"
+import { data } from "./data";
 
 export function ExampleSection({
   name = "bordados",
@@ -135,10 +135,10 @@ export function ExampleSection({
   );
 }
 
-export function ExampleGallery () {
-  return(
+export function ExampleGallery() {
+  return (
     <>
-    <ExampleSection />
+      <ExampleSection />
       <ExampleSection
         name="serigrafia"
         desc="La que usa Como una Caja de Pintura"
@@ -159,5 +159,5 @@ export function ExampleGallery () {
         card_data={data.sublimaciones}
       />
     </>
-  )
+  );
 }
