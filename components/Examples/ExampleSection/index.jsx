@@ -1,5 +1,6 @@
 import { images } from "../../../pages/gallery";
 import { ExampleCard } from "../ExampleCard/index,";
+import { data } from "./"
 
 export function ExampleSection({
   name = "bordados",
@@ -132,4 +133,31 @@ export function ExampleSection({
       `}</style>
     </div>
   );
+}
+
+export function ExampleGallery () {
+  return(
+    <>
+    <ExampleSection />
+      <ExampleSection
+        name="serigrafia"
+        desc="La que usa Como una Caja de Pintura"
+        card_data={data.serigrafia}
+        link="serigrafia"
+      />
+      <ExampleSection
+        link="estampados"
+        name="estampado"
+        desc="La que se hace con Pintura"
+        card_data={data.estampados}
+      />
+
+      <ExampleSection
+        link="sublimacion"
+        name="sublimacion"
+        desc="La mas perrona de Todas, se hace con Planchas de Calor"
+        card_data={data.sublimaciones}
+      />
+    </>
+  )
 }
