@@ -1,37 +1,13 @@
 import { useEffect, useState } from "react";
+import { useHandleCarousel } from "../../../hooks/useHandleCarousel";
+import { CarouselItem } from "./CarouselItem";
 
-const CarouselItem = ({ name = "Rock and Roll Hall of Fame", img ="https://mymodernmet.com/wp/wp-content/uploads/2020/06/needle-painting-embroidery-emillie-ferris-12.jpg" }) => (
-  <div className="carousel__elemento">
-    <img
-      src={img}
-      alt={name}
-    />
-
-    <p>{name}</p>
-    <style jsx>{`
-      .carousel__elemento {
-        text-align: center;
-        margin: 0 10px;
-        border-radius: 20px;
-        background: var(--noche-clarac);
-      }
-      img {
-        border-radius: 20px;
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-      }
-    `}</style>
-  </div>
-);
-
-export function Carousel() {
+export function Carousel({ data = [] }) {
   const [loader, setLoader] = useState(false);
-
-  useEffect(() => {
+  // const { loader, setLoader } = useHandleCarousel;
+  const CarouselConfig = () => {
     setLoader(true);
     window.addEventListener("load", function () {
-      console.log("Se desactiva");
       setLoader(false);
       new Glider(document.querySelector(".carousel__lista"), {
         slidesToShow: 1,
@@ -63,65 +39,14 @@ export function Carousel() {
         ],
       });
     });
+  };
 
-    // return () => {
-    //   window.removeEventListener("load", function () {
-    //     setLoader(false);
-    //     new Glider(document.querySelector(".carousel__lista"), {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1,
-    //       dots: ".carousel__indicadores",
-    //       arrows: {
-    //         prev: ".carousel__anterior",
-    //         next: ".carousel__siguiente",
-    //       },
-    //       responsive: [
-    //         {
-    //           // screens greater than >= 775px
-    //           breakpoint: 450,
-    //           settings: {
-    //             // Set to `auto` and provide item width to adjust to viewport
-    //             slidesToShow: 2,
-    //             slidesToScroll: 2,
-    //           },
-    //         },
-    //         {
-    //           // screens greater than >= 1024px
-    //           breakpoint: 800,
-    //           settings: {
-    //             slidesToShow: 4,
-    //             slidesToScroll: 2,
-    //           },
-    //         },
-    //       ],
-    //     });
-    //   });
-    // };
+  useEffect(() => {
+    CarouselConfig();
   }, []);
 
   return (
     <div className="contenedor">
-      {/* <main className="contenido-principal">
-        <img
-          src="https://mymodernmet.com/wp/wp-content/uploads/2020/06/needle-painting-embroidery-emillie-ferris-12.jpg"
-          alt="Dome of the German Bundestag"
-          className="contenido-principal__imagen"
-        />
-        <div className="contenido-principal__contenedor">
-          <h1 className="contenido-principal__titulo">
-            Dome of the German Bundestag
-          </h1>
-          <p className="contenido-principal__resumen">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a
-            commodo orci. Nulla ipsum ante, auctor a odio id, bibendum accumsan
-            mauris.
-          </p>
-          <p className="contenido-principal__resumen">
-            Fusce malesuada mollis ante, at elementum mi maximus nec. Praesent
-            volutpat, tortor sed condimentum sagittis, mi diam fringilla nibh.
-          </p>
-        </div>
-      </main> */}
       {loader ? (
         <p>Loading carousel</p>
       ) : (
