@@ -25,15 +25,20 @@ const PaymentPage = () => {
 
   return (
     <div className="payment-page container">
-      <h2>Pagar</h2>
-
       <div className="client-information">
+        <h2>Pagar</h2>
         <div className="direction">
           <h3>Formulario para las direcciones</h3>
         </div>
 
         <div className="order-details">
           <h3>Detalles del pedido</h3>
+
+          <div className="order-details-item">
+            <h4>Producto</h4>
+            <p>Nombre del producto Lorem ipsum dolor</p>
+            <p>$10.000</p>
+          </div>
         </div>
       </div>
 
@@ -41,12 +46,17 @@ const PaymentPage = () => {
         <h3>Resume</h3>
 
         <div className="amounts">
-          <div className="price-normal"> Original Price: 19,99$</div>
-          <div className="total">Total: 19,99$</div>
+          <div className="price-normal">
+            <p>Original Price:</p> <span>19,99$</span>
+          </div>
+
+          <div className="total">
+            <p>Total:</p> <span>19,99$</span>
+          </div>
         </div>
 
         <div className="conditions">
-          Al comprar aceptas las normas Y condiciones
+          <p>Al comprar aceptas las normas Y condiciones</p>
         </div>
 
         <div className="payment-buttons">
@@ -71,12 +81,45 @@ const PaymentPage = () => {
       </div>
 
       <style jsx>{`
+        h2 {
+          font-size: 2rem;
+        }
         .payment-page {
           display: grid;
           grid-template-columns: 3fr 1fr;
         }
         .paypal-button {
           width: 100%;
+        }
+
+        .price-normal,
+        .total {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .price-normal {
+          border-bottom: 1px solid #e6e6e6;
+        }
+
+        .total {
+          font-weight: bold;
+        }
+
+        span {
+          font-weight: bold;
+        }
+        .conditions {
+          font-size: 0.8rem;
+          text-align: center;
+        }
+        .order-details-item {
+          /* background: var(--noche-clarac); */
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          gap: 10px;
         }
       `}</style>
     </div>
