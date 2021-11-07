@@ -29,44 +29,53 @@ const SingleProduct = () => {
       </div>
 
       <div className="info-product">
-        <div className="product-title">Franela Timbrada Chidori</div>
+        <div className="product-title">
+          <h1>Franela Timbrada Chidori</h1>
+        </div>
 
-        <div className="product-price">100$</div>
-
-        <div className="product-description">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae id
-          consectetur doloribus ea repellendus nisi ullam consequatur atque,
-          consequuntur officiis reprehenderit tenetur fugit dolores impedit quo
-          laboriosam, sed vero eligendi. Illum animi officia hic doloribus quae
-          aliquam vel delectus autem!
+        <div className="product-price">
+          <h2>Precio: 100$</h2>
         </div>
 
         <div className="product-size">
           <h3>Tallas</h3>
-          <ul className="sizes">
-            <li>S</li>
-            <li>M</li>
-            <li>L</li>
-            <li>XL</li>
-            <li>XXL</li>
-          </ul>
+          <select className="sizes">
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+            <option>XXL</option>
+          </select>
         </div>
 
         <div className="product-colors">
           <h3>Colores</h3>
-          <ul className="colors">
-            <li>Black</li>
-            <li>White</li>
-            <li>Green</li>
-            <li>Red</li>
-            <li>Brown</li>
-          </ul>
+          <select className="colors">
+            <option>White</option>
+            <option>Black</option>
+            <option>Green</option>
+            <option>Red</option>
+            <option>Brown</option>
+          </select>
         </div>
 
-        <div className="quantity">Cantidad</div>
+        <div className="quantity">
+          <h3>Cantidad: 2</h3>
+        </div>
+
+        <div className="product-description">
+          <h2>Description</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae id
+            consectetur doloribus ea repellendus nisi ullam consequatur atque,
+            consequuntur officiis reprehenderit tenetur fugit dolores impedit
+            quo laboriosam, sed vero eligendi. Illum animi officia hic doloribus
+            quae aliquam vel delectus autem!
+          </p>
+        </div>
 
         <div className="button">
-          <p className="total-price">100$</p>
+          <p className="total-price">200$</p>
           <button>Add to Cart</button>
         </div>
       </div>
@@ -75,32 +84,89 @@ const SingleProduct = () => {
         img {
           max-width: 100%;
         }
+
         .single-product {
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 20px;
           min-height: 80vh;
         }
+
         .gallery-product {
         }
+
         .gallery-product img {
           width: 100%;
         }
 
+        .product-title {
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          text-align: center;
+        }
+
+        .product-title h1 {
+          border-bottom: 3px solid var(--azul);
+          margin: 0;
+        }
+
+        .product-price h2 {
+          margin-bottom: 0;
+        }
+
         .info-product {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
 
         .colors,
         .sizes {
-          display: flex;
-          gap: 10px;
+          border-radius: 3px;
+          cursor: pointer;
+          padding: 15px;
+          width: 100%;
         }
+
+        .colors li {
+          overflow: hidden;
+          background: green;
+          border-radius: 50%;
+          padding: 30px;
+          object-fit: cover;
+        }
+
+        .product-description h2 {
+          margin-top: 0;
+        }
+
         .button {
+          align-items: center;
+          display: flex;
           display: grid;
           grid-template-columns: 0.2fr auto;
+          padding: 20px;
+          gap: 10px;
         }
+
+        .button button {
+          background: var(--azul);
+          border: none;
+          border-radius: 10px;
+          color: inherit;
+          cursor: pointer;
+          height: 80%;
+        }
+
         .total-price {
+          align-items: center;
+          background: var(--azul);
+          display: flex;
           font-size: 1.5rem;
+          height: 80%;
+          justify-content: center;
+          border-radius: 10px;
         }
       `}</style>
     </div>
