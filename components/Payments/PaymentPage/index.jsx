@@ -29,6 +29,28 @@ const PaymentPage = () => {
         <h2>Pagar</h2>
         <div className="direction">
           <h3>Formulario para las direcciones</h3>
+          <form action="">
+            <div className="form-group">
+              <label htmlFor="">Estado</label>
+              <input type="text" className="form-control" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="">Municipio</label>
+              <input type="text" className="form-control" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="">Ciudad</label>
+              <input type="text" className="form-control" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="">Direccion</label>
+              <input type="text" className="form-control" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="">Dirección 2</label>
+              <input type="text" className="form-control" />
+            </div>
+          </form>
         </div>
 
         <div className="order-details">
@@ -61,7 +83,7 @@ const PaymentPage = () => {
 
         <div className="payment-buttons">
           <div className="paypal-button">
-            {scriptLoaded && (
+            {scriptLoaded ? (
               <PayPalButton
                 onSuccess={(details, data) => {
                   console.log(
@@ -75,6 +97,8 @@ const PaymentPage = () => {
                 }}
                 amount={amount}
               />
+            ) : (
+              <p style={{ textAlign: "center" }}>Loading Paypal Button</p>
             )}
           </div>
         </div>
