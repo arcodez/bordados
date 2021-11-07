@@ -29,23 +29,28 @@ const PaymentPage = () => {
         <h2>Pagar</h2>
         <div className="direction">
           <h3>Formulario para las direcciones</h3>
+
           <form action="">
             <div className="form-group">
               <label htmlFor="">Estado</label>
               <input type="text" className="form-control" />
             </div>
+
             <div className="form-group">
               <label htmlFor="">Municipio</label>
               <input type="text" className="form-control" />
             </div>
+
             <div className="form-group">
               <label htmlFor="">Ciudad</label>
               <input type="text" className="form-control" />
             </div>
+
             <div className="form-group">
               <label htmlFor="">Direccion</label>
               <input type="text" className="form-control" />
             </div>
+
             <div className="form-group">
               <label htmlFor="">Dirección 2</label>
               <input type="text" className="form-control" />
