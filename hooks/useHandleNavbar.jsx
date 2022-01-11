@@ -2,19 +2,19 @@ import { useState, useEffect } from "react";
 
 export function useHandleNavbar() {
   const [theme, setTheme] = useState({
-    active: "off",
+    active: "on",
     icon: "/sun.svg",
   });
 
   function handleActivo() {
-    if (theme.active === "off") {
+    if (theme.active === "on") {
       setTheme({
-        active: "on",
+        active: "off",
         icon: "/moon.svg",
       });
     } else {
       setTheme({
-        active: "off",
+        active: "on",
         icon: "/sun.svg",
       });
     }
