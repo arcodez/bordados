@@ -94,6 +94,7 @@ export const Navbar2 = () => {
           </div>
         </nav>
       </header>
+      
       <style jsx global>{`
       body {
         background: ${ theme.active === "off" && "white" };
